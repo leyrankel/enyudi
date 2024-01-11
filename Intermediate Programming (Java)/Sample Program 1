@@ -1,0 +1,32 @@
+import java.util.Scanner;
+public class SampleProgram1 {
+    public static void main(String[] args) {
+        circumference();
+        randomCharacters();
+        removeCharacters();
+    }
+    public static void circumference() {
+        Scanner kel = new Scanner(System.in);
+        System.out.print("Enter radius: ");
+        double radius = kel.nextDouble();
+        double circumference = 2 * Math.PI * radius;
+        System.out.println("Circumference" + String.format("%.2f", circumference));
+    }
+    public static void randomCharacters() {
+        Scanner kel = new Scanner(System.in);
+        System.out.print("Enter number of characters: ");
+        int num = kel.nextInt();
+        String text = "";2
+        for (int i=0; i<num; i++) {
+            char c = (char) ('a' + Math.random() * ('z' - 'a' + 1));
+            text += c;  
+    }
+    public static void removeCharacters() {
+        Scanner kel = new Scanner(System.in);
+        System.out.print("Enter string: ");
+        String text = kel.nextLine();
+        System.out.print("Remove: ");
+        String c = kel.next();
+        System.out.println(text.replace(c, ""));
+    }
+}
