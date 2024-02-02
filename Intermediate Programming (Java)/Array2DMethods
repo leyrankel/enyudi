@@ -1,0 +1,32 @@
+package IntermediateProgramming;
+
+import java.util.Scanner;
+
+public class Array2DMethods {
+    public static void main(String[] args) {
+        Scanner input = new Scanner (System. in) ;
+        System.out.print("Enter rows: ");
+        int row = input.nextInt();
+        System.out.print("Enter columns: ");
+        int col = input.nextInt();
+        int [] [] array = new int [row] [col];
+        randomElements(array, row, col);
+        outputElements(array);
+    }
+    public static void randomElements(int [][] array, int row, int col) {
+        for(int i=0; i<row; i++) {
+            for (int j=0; j<col; j++) {
+                array [i][j] = (int) (Math.random() * 100);
+            }
+        }          
+    }
+    public static void outputElements(int [][] array) {
+        System.out.print("Array Elements: \n");
+        for(int[] row: array){
+            for (int element: row) {
+                System.out.print(element + " ");
+            }
+            System.out.print("\n");
+        }        
+    }
+}    
